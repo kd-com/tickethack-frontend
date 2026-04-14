@@ -50,21 +50,6 @@
                         &#calendrier {
                             margin-top:2em;
                         }
-                        
-                        &[type='submit'] {
-                            background:$vert;
-                            margin-top:2em;
-                            color:$blanc;
-                            transition:all .5s;
-                            cursor:pointer;
-
-                            &:hover {
-                                background:$noir;
-                                color:$vert;
-                            }
-
-                        }
-
                     }
                 }
             }
