@@ -1,1 +1,57 @@
 @use 'variable' as*;
+
+#mycart{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: $gris;
+
+
+    .row{
+        background: $blanc;
+        border-radius: $border-radius;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .container-trajet{
+            display: flex;
+            flex-direction: row;
+            align-content: space-between;
+            justify-content: space-between;
+            background-color: rgb(102, 93, 93);
+            width: 70%;
+            font-size: 1rem;
+            margin-bottom: 10px;
+
+        }
+
+        .container-achat{
+            display: flex;
+            flex-direction: row;
+            align-content: space-between;
+            justify-content: space-between;
+            background-color: rgb(43, 3, 3);
+            width: 100%;
+            color: aliceblue;
+            border-radius: $border-radius;
+
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
