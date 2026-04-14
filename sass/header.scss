@@ -1,6 +1,6 @@
 @use 'variable' as *;
 header {
-    background-color:$gris;
+    background-color:$blanc;
     .row {
         align-content: space-between;
         justify-content: space-between;
@@ -25,7 +25,7 @@ header {
                     &:hover {
                         background:$vert;
                         a {
-                            color:$gris;
+                            color:$blanc;
                         }
                     }
                 }
