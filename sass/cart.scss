@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: $gris;
+    background-color: rgb(224, 223, 224) ;
 
 
     .row{
@@ -24,24 +24,41 @@
             flex-direction: row;
             align-content: space-between;
             justify-content: space-between;
-            background-color: rgb(102, 93, 93);
+            background-color: rgb(243, 221, 175);
             width: 70%;
-            font-size: 1rem;
-            margin-bottom: 10px;
+            font-size: 0.75rem;
+            font-weight: 10px;
+            margin-bottom: 1.5rem;
+            padding-left: 15px;
+            padding-right: 15px;
 
         }
 
         .container-achat{
             display: flex;
             flex-direction: row;
-            align-content: space-between;
             justify-content: space-between;
-            background-color: rgb(43, 3, 3);
+            background-color: rgb(5, 8, 151);
             width: 100%;
             color: aliceblue;
-            border-radius: $border-radius;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius:15px ;
+            height: 50px;
+           
 
-        }
+
+            #purchase{
+                font-size: 16px;
+                margin-right: 50px;
+                height: 1.6rem;
+                margin-top: 10px;
+
+            }
+            .prix{
+                margin-left: 50px;
+            }
+
+         }
     }
 
 
