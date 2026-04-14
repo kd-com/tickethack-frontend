@@ -1,5 +1,5 @@
 header {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 header .row {
   align-content: space-between;
@@ -29,7 +29,13 @@ header .row nav ul li:hover {
   background: #50a990;
 }
 header .row nav ul li:hover a {
-  color: #f9f9f9;
+  color: #ffffff;
+}
+header .row nav ul li.active {
+  background: #50a990;
+}
+header .row nav ul li.active a {
+  color: #ffffff;
 }
 
 body {

@@ -28,6 +28,12 @@ header {
                             color:$blanc;
                         }
                     }
+                    &.active {
+                        background:$vert;
+                        a {
+                            color:$blanc;
+                        }
+                    }
                 }
 
             }
