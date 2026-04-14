@@ -1,0 +1,25 @@
+@use 'variable' as*;
+@use 'header' as *;
+@use 'index' as *;
+@use 'cart' as *;
+@use 'booking' as *;
+
+body {
+    margin:0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    padding: 1em 2em;
+    .row {
+        display:flex;
+        flex-direction: row;
+        @media (max-width: 600px) {
+            flex-direction:column
+        }
+    }
+}
+a {
+    color:$vert;
+    text-decoration:none;
+}

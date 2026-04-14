@@ -1,0 +1,36 @@
+@use 'variable' as *;
+header {
+    background-color:$gris;
+    .row {
+        align-content: space-between;
+        justify-content: space-between;
+        align-items: center;
+
+        nav {
+            ul {
+                display:flex;
+                list-style:none;
+                flex-direction:row;
+                @media(max-width:600px) {
+                    flex-direction:column;
+                }
+                li {
+                    padding: 1em 1em;
+                    background: $gris;
+                    transition: all .5s;
+                    a {
+                        color:$noir;
+                        transition: all .5s
+                    }
+                    &:hover {
+                        background:$vert;
+                        a {
+                            color:$gris;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
