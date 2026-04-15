@@ -11,22 +11,7 @@ btnSearch.addEventListener('click', function() {
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        if(data.filteredTrips > 0) {
-            const tripsList = document.getElementById('result-null')
-            tripsList.innerHTML = ''
-            for(let i = 0; i < data.filteredTrips.length; i++) {
-                const trip = data.filteredTrips[i];
-                const tripRow = document.createElement('div');
-                tripRow.classList.add('triprow');
-                // Ajoute du contenu dans tripRow selon ta structure de données
-                tripRow.innerHTML = `
-                    <p>${trip.departure} → ${trip.arrival}</p>
-                    <p>${trip.date}</p>
-                `;
-                tripsList.appendChild(tripRow);
-
-            }
-        } else {
+        if(data.filteredTrips.length === 0) {
             const resultNull = document.getElementById('result-null')
             resultNull.innerHTML = ''
             const img = document.createElement('img');
@@ -41,6 +26,37 @@ btnSearch.addEventListener('click', function() {
             resultNull.appendChild(img)
             resultNull.appendChild(sep)
             resultNull.appendChild(paragraphe)
+            
+        } else {
+            const tripsList = document.getElementById('result-null')
+            tripsList.classList.add('search-result')
+            tripsList.innerHTML = ''
+            for(let i = 0; i < data.filteredTrips.length; i++) {
+                const trip = data.filteredTrips[i];
+                const tripRow = document.createElement('div');
+                tripRow.classList.add('triprow');
+                const tripContent = document.createElement('p')
+                tripContent.textContent = `${trip.departure} → ${trip.arrival}`
+                const tripHour = document.createElement('p')
+                const convertHour = new Date(`${trip.date}`);
+                let hour = convertHour.getHours()
+                let min = convertHour.getMinutes()
+                tripHour.textContent = `${hour}h${min}`;
+                const tripPrice = document.createElement('p');
+                tripPrice.classList.add('price')
+                tripPrice.textContent = `${trip.price}€`;
+                const tripBtn = document.createElement('button');
+                tripBtn.id = `${trip._id}`;
+                tripBtn.textContent = 'Book';
+                
+                tripsList.appendChild(tripRow);
+                tripRow.appendChild(tripContent);
+                tripRow.appendChild(tripHour);
+                tripRow.appendChild(tripPrice);
+                tripRow.appendChild(tripBtn);
+
+            }
+            
 
         }
     })

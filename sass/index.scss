@@ -37,6 +37,12 @@
                 padding:2em;
                 display:flex;
                 flex-direction: column;
+                min-width: 35%;
+                max-width: 100%;
+                @media(max-width : 600px) {
+                    min-width: fit-content !important;
+
+                }
             }
             #search {
                 &.card {             
@@ -60,6 +66,40 @@
                         height:2px;
                         display:block;
                         background:$vert;
+                    }
+                }
+                #result-null {
+                    text-align: center;
+                    img {
+                        width:70%;
+                        height:auto;
+                        
+                    }
+                    .search-result {
+                        overflow: scroll;
+                        height:250px;
+                    }
+
+                    .triprow {
+                        display:flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        align-content: center;
+                        background:$gris;
+                        padding: 1em;
+                        margin-bottom: 1em;
+                        border-radius: $border-radius;
+
+                        button {
+                            margin-top: 0;
+                        }
+                        .price {
+                            color:$vert;
+                            font-weight: 600;
+                        }
+                        &:last-child {
+                            margin-bottom:0;
+                        }
                     }
                 }
             }

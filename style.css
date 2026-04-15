@@ -77,6 +77,13 @@ header .row nav ul li.active a {
   padding: 2em;
   display: flex;
   flex-direction: column;
+  min-width: 35%;
+  max-width: 100%;
+}
+@media (max-width: 600px) {
+  #home .content .row-search .card {
+    min-width: fit-content !important;
+  }
 }
 #home .content .row-search #search.card input {
   background: #f9f9f9;
@@ -94,6 +101,37 @@ header .row nav ul li.active a {
   height: 2px;
   display: block;
   background: #50a990;
+}
+#home .content .row-search #search-result #result-null {
+  text-align: center;
+}
+#home .content .row-search #search-result #result-null img {
+  width: 70%;
+  height: auto;
+}
+#home .content .row-search #search-result #result-null .search-result {
+  overflow: scroll;
+  height: 250px;
+}
+#home .content .row-search #search-result #result-null .triprow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background: #f9f9f9;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 15px;
+}
+#home .content .row-search #search-result #result-null .triprow button {
+  margin-top: 0;
+}
+#home .content .row-search #search-result #result-null .triprow .price {
+  color: #50a990;
+  font-weight: 600;
+}
+#home .content .row-search #search-result #result-null .triprow:last-child {
+  margin-bottom: 0;
 }
 
 #mycart {
