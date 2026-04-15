@@ -49,11 +49,14 @@ btnSearch.addEventListener('click', function() {
                 tripBtn.id = `${trip._id}`;
                 tripBtn.textContent = 'Book';
                 
+                
                 tripsList.appendChild(tripRow);
                 tripRow.appendChild(tripContent);
                 tripRow.appendChild(tripHour);
                 tripRow.appendChild(tripPrice);
                 tripRow.appendChild(tripBtn);
+                
+                addToCart(tripBtn)
 
             }
             
@@ -62,3 +65,49 @@ btnSearch.addEventListener('click', function() {
     })
     
 })
+
+// envoi du trajet vers la page panier
+function addToCart(btnId) {
+    const btnAddToCart = document.getElementById(`${btnId.id}`)
+    btnAddToCart.addEventListener('click', function() {
+        fetch(`http://localhost:3000/cart/${btnId.id}`, {
+		    method: 'POST',
+		    headers: { 'Content-Type': 'application/json' },
+	    })
+        .then(response => response.json())
+        .then(data => {
+            if(data.result) {
+                popupMessage('Voyage ajouté au panier')
+                console.log('✅ Voyage ajouté au panier')
+            } else {
+                popupMessage('Voyage déjà dans le panier')
+                console.log('❌', data.error)
+            }
+        })
+
+    })
+}
+
+// gestion popup message
+ function popupMessage(message) {
+    const body = document.querySelector('body')
+    body.classList.add('active')
+    const popup = document.createElement('div')
+        popup.id= ('popadd')
+        popup.classList.add('open');
+        popup.innerHTML= `<p>${message}</p>`
+    const popclose = document.createElement('div')
+    popclose.textContent = 'X';
+    popclose.addEventListener('click', function() {
+        body.classList.remove('active');
+        popup.classList.remove('open');
+    })
+    const goCart = document.createElement('button')
+    goCart.onclick= function() {
+        location.href= 'cart.html'
+    }
+    goCart.textContent="Allez sur le panier"
+    document.querySelector('footer').appendChild(popup);
+    popup.appendChild(popclose);
+    popup.appendChild(goCart)
+ }
