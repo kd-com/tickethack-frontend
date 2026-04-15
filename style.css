@@ -115,16 +115,35 @@ header .row nav ul li.active a {
 }
 #mycart .row .container-trajet {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-content: space-between;
   justify-content: space-between;
-  background-color: rgb(243, 221, 175);
   width: 70%;
   font-size: 0.75rem;
   font-weight: 10px;
   margin-bottom: 1.5rem;
   padding-left: 15px;
   padding-right: 15px;
+}
+#mycart .row .container-trajet .rowTrips {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #dfdae3;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+}
+#mycart .row .container-trajet .rowTrips button {
+  width: 20px;
+  height: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #058e43;
+  padding: 0em;
 }
 #mycart .row .container-achat {
   display: flex;
