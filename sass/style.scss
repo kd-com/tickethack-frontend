@@ -1,16 +1,18 @@
 @use "variable" as *;
 @use "header" as *;
 @use "index" as *;
-@use "cart" as *;
+@use "cartkevin" as *;
 @use "booking" as *;
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $gris;
   &:before {
     opacity:0;
     transition: all .5s;
+    
   }
   &.active {
     &:before {

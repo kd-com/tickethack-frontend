@@ -1,0 +1,37 @@
+@use "variable" as *;
+#mycart {
+    height: 100vh;
+    &.container {
+        justify-content: center;
+        align-content: center;
+
+        .row {
+            flex-direction: column;
+            margin:0 auto;
+            background-color:$blanc;
+            border-radius: $border-radius;
+            text-align:center;
+            max-width: 850px;
+
+            .rowTrips {
+                background:$gris;
+                padding:1em;
+                margin:1em;
+                border-radius:$border-radius;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .depArr {
+                    width:25%;
+                    display:flex;
+                    justify-content: space-between;
+                    .town {
+                        font-weight: 800;
+                        color:$vert;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -30,17 +30,23 @@
     <main>
         <div id="mycart" class="container">
             <div class="row">
-                 <h1>My cart</h1>
-                <div id="updatedCart" class="container-trajet">
-                    <h2>Your cart is empty</h2>
-                    <a href="index.html">Go to select trajet</a>
+                 <h5>My cart</h5>
+                <div class="container-trajet">
+                    <p class="trajet"> <span class="departure">Depart</span>><span class="arrival">Arrive</span></p>
+                    <p class="hour">heure</p>
+                    <p class="price">prix</p>
+                    <button class="btnDelete1" type="button">X</button>
+                </div>
+                <div class="container-achat">
+                    <p class="mont">Total: <span class="totalPrice">Montant</span></p>
+                    <button class="btnPourchase" type="button"> Pourchase </button>
                 </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <script src="./scripts/cartkevin.js"></script>
+        <script src="./scripts/cart.js"></script>
 </footer>
 </body>
 </html>
