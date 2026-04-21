@@ -31,6 +31,40 @@
                         color:$vert;
                     }
                 }
+                .price {
+                    color:$vert;
+                    font-weight:800;
+                }
+                .deletebtn {
+                    margin-top:0;
+                    aspect-ratio: 1 / 1;
+                    width:35px;
+                    height:35px;
+                    padding:0.3em;
+                    border-radius:100%;
+                }
+            }
+            .totalrow {
+                padding:2em 1em;
+                background:$vert;
+                border-radius: 0 0 $border-radius $border-radius;
+                color:$blanc;
+                font-weight: 800;
+                display: flex;
+                justify-content: space-between;
+
+                .purchasebtn {
+                    margin-top:0;
+                    background:$gris;
+                    color:$vert;
+                    font-weight: 800;
+                    transition:all 1s;
+                    &:hover {
+                        background:$noir;
+                        color:$blanc;
+                    }
+                    
+                }
             }
         }
     }

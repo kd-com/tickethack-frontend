@@ -167,6 +167,38 @@ header .row nav ul li.active a {
   font-weight: 800;
   color: #50a990;
 }
+#mycart.container .row .rowTrips .price {
+  color: #50a990;
+  font-weight: 800;
+}
+#mycart.container .row .rowTrips .deletebtn {
+  margin-top: 0;
+  aspect-ratio: 1/1;
+  width: 35px;
+  height: 35px;
+  padding: 0.3em;
+  border-radius: 100%;
+}
+#mycart.container .row .totalrow {
+  padding: 2em 1em;
+  background: #50a990;
+  border-radius: 0 0 15px 15px;
+  color: #ffffff;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+}
+#mycart.container .row .totalrow .purchasebtn {
+  margin-top: 0;
+  background: #f9f9f9;
+  color: #50a990;
+  font-weight: 800;
+  transition: all 1s;
+}
+#mycart.container .row .totalrow .purchasebtn:hover {
+  background: #010101;
+  color: #ffffff;
+}
 
 body {
   margin: 0;
